@@ -1,2 +1,2 @@
 # TopoLab
-Topography-based routines for downscaling (TopoSCALE) and clustering (TopoSUB) ported to Matlab
+Topography-based routines for downscaling (TopoSCALE) and clustering (TopoSUB) meteorological forcing data ported to Matlab
