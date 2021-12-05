@@ -1,0 +1,3 @@
+restoredefaultpath;
+addpath(genpath(pwd));
+
