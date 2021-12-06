@@ -1,7 +1,7 @@
 # TopoLAB
 Topography-based routines for generating terrain parameters (TopoPAR) as well as downscaling (TopoSCALE) and clustering (TopoSUB) meteorological forcing data. These routines have been ported and adapted to Matlab based on initial work by Joel Fiddes and routines in R and Python. 
 
-![myimage-alt-tag](https://www.dropbox.com/s/7xbgq9qq7b5aggg/TopoLAB.jpg?dl=0)
+![myimage-alt-tag](https://www.dropbox.com/s/7xbgq9qq7b5aggg/TopoLAB.jpg?dl=1)
 
 To test the TopoLAB routines simply run the main.m script which goes through the steps of calculating terrain parameters (TopoPAR), splitting the domain into clusters (TopoSUB), and running TopoSCALE. Note that this requires downloading some input data (roughly 70 MB) in the form of processed DEMs and ERA5 data for 2019. The two example sites are the Brøgger peninsula (the area around Ny-Ålesund) on Svalbard and the area aroudn Terelj in central Mongolia.  
 
