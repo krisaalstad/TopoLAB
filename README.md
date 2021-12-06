@@ -19,9 +19,9 @@ You can read more about the routines making up TopoLAB (TopoSCALE, TopoSUB, Topo
 - Fiddes, J. and Gruber, S.: TopoSUB: a tool for efficient large area numerical modelling in complex topography at sub-grid scales, Geosci. Model Dev., 5, 1245–1257, https://doi.org/10.5194/gmd-5-1245-2012, 2012.
 - Dozier, J. and Frew, J.: Rapid calculation of terrain parameters for radiation modeling from digital elevation data, IEEE TGRS, https://doi.org/10.1109/36.58986, 1990
 
-The equations and workflow in TopoLAB is also outlined more extensively in Section 2.1 (Forcing) of my thesis:
+In addition, most of the equations in TopoLAB are outlined in Section 2.1 of my thesis:
 
-- Aalstad, K.: Ensemble-based retrospective analysis of the seasonal snowpack, PhD Thesis at the University of Oslo, http://dx.doi.org/10.13140/RG.2.2.11709.20961, 2019. 
+- Aalstad, K.: Ensemble-based retrospective analysis of the seasonal snowpack, PhD thesis at the University of Oslo, http://dx.doi.org/10.13140/RG.2.2.11709.20961, 2019. 
 
 
 
