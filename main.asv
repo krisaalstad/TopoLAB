@@ -5,7 +5,7 @@ load('batlow.mat'); % Nice "scientific colormap"
 
 %% Pick a study site for this demonstration
 % Options: 'Brøgger' (on Svalbard) or 'Terelj' (in Mongolia)
-site='Brøgger';
+site='Terelj';
 % Note, Terelj is a smaller area so it will run faster.
 
 %% Pre-processing fetching input
@@ -160,7 +160,7 @@ imagesc(tp.xg,tp.yg,img,'AlphaData',tp.mask);
 axis xy;
 xlim(xl); ylim(yl);
 pbaspect([1 dyl/dxl 1]);
-%title('Annual incoming shortwave','Interpreter','Latex','FontSize',16);
+title('Annual incoming shortwave','Interpreter','Latex','FontSize',16);
 set(gca,'XTick',[],'YTick',[]);
 colormap(ax1,batlow);
 c=colorbar;
@@ -168,8 +168,7 @@ c.TickLabelInterpreter='latex';
 c.TickDirection='out';
 c.FontSize=10;
 caxis([min(img(:)) max(img(:))]);
-xlabel(c,'Incoming shortwave, $\int S^\downarrow \,  dt$ [MJ]',...
-    'Interpreter','Latex','FontSize',16);
+xlabel(c,'$\int S^\downarrow \,  dt$ [MJ]','Interpreter','Latex','FontSize',18);
 
 ax2=subplot(2,3,2);
 img=nan(size(tp.mask));
@@ -191,8 +190,7 @@ c.TickLabelInterpreter='latex';
 c.TickDirection='out';
 c.FontSize=10;
 caxis([min(img(:)) max(img(:))]);
-xlabel(c,'Incoming longwave, $\int L^\downarrow \,  dt$ [MJ]',...
-    'Interpreter','Latex','FontSize',16);
+xlabel(c,'$\int L^\downarrow \,  dt$ [MJ]','Interpreter','Latex','FontSize',18);
 
 ax2=subplot(2,3,3);
 img=nan(size(tp.mask));
@@ -214,8 +212,7 @@ c.TickLabelInterpreter='latex';
 c.TickDirection='out';
 c.FontSize=10;
 caxis([min(img(:)) max(img(:))]);
-xlabel(c,'Mean air temperature, $\overline{T}$ [$^\circ$C]',...
-    'Interpreter','Latex','FontSize',16);
+xlabel(c,'Annual mean air temperature, $\overline{T}$ [$^\circ$C]','Interpreter','Latex','FontSize',18);
 
 
 
@@ -247,7 +244,7 @@ if strcmp(site,'Brøgger')
 else
     sites='Terelj (Mongolia)';
 end
-title(sprintf('ERA5 data downscaled with TopoSUB and TopoSCALE for %s in 2019',sites),...
+title(sprintf('TopoSUB+TopoSCALEd ERA5 data for %s in 2019',sites),...
     'Interpreter','Latex','FontSize',18);
 
 
