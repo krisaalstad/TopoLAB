@@ -1,4 +1,4 @@
-function [ tp ] = TopoPAR_par( DEM )
+function [ tp ] = TopoPAR( DEM, ncores )
 %% TopoPAR_par.m (parallel version of TopoPAR)
 % Calculates topographic parameters, including solar geometry, for a
 % given region and time period as specified by an input time array and
@@ -27,7 +27,6 @@ function [ tp ] = TopoPAR_par( DEM )
 % Parallel version October 24, 2021.
 
 %% Related to parallelization
-ncores=2;%20;
 Nc=20;%sum(DEM.mask(:));%100; % Number of chunks (*must be a multiple of ncores). 
 % Chunk size of Np=sum(DEM.mask(:)) is the same as looping over all cells,
 % but with parfor overhead. So best is some order of magnitude less than
