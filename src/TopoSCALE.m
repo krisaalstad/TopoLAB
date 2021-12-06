@@ -189,7 +189,7 @@ fout.LW=temp; fout.SW=temp; fout.P=temp; fout.ps=temp;
 % Calculate inverse distance weights (IDWs).
 Nc=numel(Xc(:)); % Number of coarse grid cells (in the horizontal plane).
 % Number of nearest neighbors used in inverse distance weighted interpolation
-kNN=min(9,Nc);
+kNN=min(18,Nc);
 %kNN=4;
 %NN=knnsearch([Xc(:) Yc(:)],[X(:)  Y(:)],'k',kNN);
 Xcr=repmat(Xc(:)',Nf,1); Ycr=repmat(Yc(:)',Nf,1);
@@ -291,16 +291,9 @@ for n=1:Nt
     end
     % Now we can pick out the elevations at the relevant ("underlying" and
     % "overlying") levels.
-    %Z1=Zm;
-    %Z1(~underlying)=0; % Would be nice to speed this up!
-    %Z1=sum(Z1,2);
     Zmt=Zm';
     underlying=underlying';
     Z1=Zmt(underlying);
-    
-    %Z2=Zm;
-    %Z2(~overlying)=0;
-    %Z2=sum(Z2,2);
     overlying=overlying';
     Z2=Zmt(overlying);
     
@@ -478,10 +471,7 @@ for n=1:Nt
         
         % Direct component
         SWcdir=SWc-SWcdiff;
-        
        
-        
-        
         % Scale direct shortwave using Beer's law (see Aalstad 2019, Appendix A)
         ka=(g.*mu0./(psl)).*log(SWtoa./SWcdir); % Note, we don't get log(0) due to "if sunset" condition.
         SWfdir=SWtoa.*exp(-ka.*pout./(g*mu0));
