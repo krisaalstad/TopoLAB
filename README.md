@@ -3,7 +3,7 @@ Topography-based routines for generating terrain parameters (TopoPAR) as well as
 
 ![Alt text](TopoLAB.jpg "Title")
 
-To test the TopoLAB routines simply run the main.m script which goes through the steps of calculating terrain parameters (TopoPAR), splitting the domain into clusters (TopoSUB), and running TopoSCALE. Note that this requires downloading some input data (roughly 70 MB) in the form of processed DEMs and ERA5 data for 2019. The two example sites are the Brøgger peninsula (the area around Ny-Ålesund) on Svalbard and the area aroudn Terelj in central Mongolia.  
+To test the TopoLAB routines simply run the main.m script which goes through the steps of calculating terrain parameters (TopoPAR), splitting the domain into clusters (TopoSUB), and running TopoSCALE. Note that this requires downloading some input data (roughly 70 MB) in the form of processed DEMs and ERA5 data for 2019. The two example sites are the Brøgger peninsula (the area around Ny-Ålesund) on Svalbard and the area aroudn Terelj in central Mongolia. The figure above shows some results for the Brøgger example, run at 30 m resolution with 200 TopoSUB clusters (rather than 200 000 explicit grid cells) with obvious savings in run time and storage, with only small reductions in accuracy. 
 
 These TopoLAB routines have been tested in several sites including: Svalbard, Finnmark, Hokkaido, the Sierra Nevada, Finse, Mongolia, and the Pyrenees. The original TopoSUB and TopoSCALE code that TopoLAB is based on has been tested extensively in the Swiss Alps as well as in central Asia. 
 
