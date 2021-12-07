@@ -161,14 +161,15 @@ axis xy;
 xlim(xl); ylim(yl);
 pbaspect([1 dyl/dxl 1]);
 %title('Annual incoming shortwave','Interpreter','Latex','FontSize',16);
-set(gca,'XTick',[],'YTick',[]);
+set(gca,'XTick',[],'YTick',[],'LineWidth',1.5);
 colormap(ax1,batlow);
 c=colorbar;
 c.TickLabelInterpreter='latex';
 c.TickDirection='out';
 c.FontSize=10;
+c.LineWidth=1.5;
 caxis([min(img(:)) max(img(:))]);
-xlabel(c,'Incoming shortwave, $\int S^\downarrow \,  dt$ [MJ]',...
+xlabel(c,'Shortwave, $\int S^\downarrow \,  dt$ [MJm$^{-2}$]',...
     'Interpreter','Latex','FontSize',16);
 
 ax2=subplot(2,3,2);
@@ -184,14 +185,15 @@ axis xy;
 xlim(xl); ylim(yl);
 pbaspect([1 dyl/dxl 1]);
 %title('Annual incoming longwave','Interpreter','Latex','FontSize',16);
-set(gca,'XTick',[],'YTick',[]);
+set(gca,'XTick',[],'YTick',[],'LineWidth',1.5);
 colormap(ax2,batlow);
 c=colorbar;
 c.TickLabelInterpreter='latex';
 c.TickDirection='out';
 c.FontSize=10;
+c.LineWidth=1.5;
 caxis([min(img(:)) max(img(:))]);
-xlabel(c,'Incoming longwave, $\int L^\downarrow \,  dt$ [MJ]',...
+xlabel(c,'Longwave, $\int L^\downarrow \,  dt$ [MJm$^{-2}$]',...
     'Interpreter','Latex','FontSize',16);
 
 ax2=subplot(2,3,3);
@@ -207,12 +209,13 @@ axis xy;
 xlim(xl); ylim(yl);
 pbaspect([1 dyl/dxl 1]);
 %title('Annual mean air temperature','Interpreter','Latex','FontSize',16);
-set(gca,'XTick',[],'YTick',[]);
+set(gca,'XTick',[],'YTick',[],'LineWidth',1.5);
 colormap(ax2,batlow);
 c=colorbar;
 c.TickLabelInterpreter='latex';
 c.TickDirection='out';
 c.FontSize=10;
+c.LineWidth=1.5;
 caxis([min(img(:)) max(img(:))]);
 xlabel(c,'Mean air temperature, $\overline{T}$ [$^\circ$C]',...
     'Interpreter','Latex','FontSize',16);
@@ -251,4 +254,4 @@ title(sprintf('ERA5 data downscaled with TopoSUB and TopoSCALE for %s in 2019',s
     'Interpreter','Latex','FontSize',18);
 
 
-
+print('-djpeg','tmp','-r300','-opengl');
