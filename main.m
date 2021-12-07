@@ -254,4 +254,3 @@ title(sprintf('ERA5 data downscaled with TopoSUB and TopoSCALE for %s in 2019',s
     'Interpreter','Latex','FontSize',18);
 
 
-print('-djpeg','tmp','-r300','-opengl');
