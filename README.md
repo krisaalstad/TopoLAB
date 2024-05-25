@@ -1,3 +1,9 @@
+# Disclaimer
+
+Unless you are (a bit like me) still very fond of working in Matlab at times, I would recommend you to instead check out the more up to date and user friendly TopoPyScale over at https://github.com/ArcticSnow/TopoPyScale described in the recent JOSS paper led by Simon Filhol
+
+Filhol et al., (2023). TopoPyScale: A Python Package for Hillslope Climate Downscaling. Journal of Open Source Software, 8(86), 5059, https://doi.org/10.21105/joss.05059
+
 # TopoLAB
 Topography-based routines for generating terrain parameters (TopoPAR) as well as downscaling (TopoSCALE) and clustering (TopoSUB) meteorological forcing data. These routines have been ported and adapted to Matlab based on initial work by Joel Fiddes and routines in R and Python. 
 
