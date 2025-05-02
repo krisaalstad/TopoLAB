@@ -619,11 +619,16 @@ end
         
         % Convert solar azimuth angle from [N,E,S,W]=[0,90,180,270] to [180, 90, 0
         % -90], i.e. the same as the aspect and horizon angle system.
+        %{
+        % Old long form version by sector:
         solar_azimuth=deg2rad(SunAz);
         solar_azimuth=(5*pi/2)-solar_azimuth;
         solar_azimuth=solar_azimuth-2.*pi.*(solar_azimuth>2.*pi);
         solar_azimuth=solar_azimuth+pi/2;
         solar_azimuth=solar_azimuth-2.*pi.*(solar_azimuth>pi);
+        %}
+        % Simpler formulation, thanks Marco :)
+        solar_azimuth=deg2rad(180-SunAz)
         
         % Calculate solar zenith angle from solar elevation angle
         SunEl=deg2rad(SunEl);
